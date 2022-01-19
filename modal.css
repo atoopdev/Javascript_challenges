@@ -1,0 +1,32 @@
+/* remove margins on typography to keep margins consistent */
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+}
+
+button {
+  background-color: royalblue;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+button:hover,
+button:focus {
+  color: white;
+  background-color: blue;
+}
+
+.container {
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
