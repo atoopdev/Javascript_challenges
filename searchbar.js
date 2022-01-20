@@ -16,7 +16,7 @@ for(let counter = 0; counter < allNamesDOMCollection.length; counter++)
     const currentName = allNamesDOMCollection[counter].textContent.toLowerCase();
     console.log(currentName);
     // search for searchInput in list - only matches left visible
-    if(currentName == searchQuery){
+    if(currentName.includes(searchQuery)){
         console.log("Match!");
         allNamesDOMCollection[counter].style.display = "block";
     }
