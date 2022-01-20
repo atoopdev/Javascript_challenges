@@ -9,8 +9,21 @@ document.getElementById("searchInput").addEventListener("keyup", function(){
     console.log("searchQuery", searchQuery);
 
     let allNamesDOMCollection = document.getElementsByClassName("name");
-// returns htmlcollection
-console.log(allNamesDOMCollection);
-// shows text content in the html at index 0
-console.log(allNamesDOMCollection[0].textContent);
+
+// list out all names
+for(let counter = 0; counter < allNamesDOMCollection.length; counter++)
+{
+    const currentName = allNamesDOMCollection[counter].textContent.toLowerCase();
+    console.log(currentName);
+    // search for searchInput in list - only matches left visible
+    if(currentName == searchQuery){
+        console.log("Match!");
+        allNamesDOMCollection[counter].style.display = "block";
+    }
+    else{
+        console.log("No match");
+        allNamesDOMCollection[counter].style.display = "none";
+    }
+}
+
 })
