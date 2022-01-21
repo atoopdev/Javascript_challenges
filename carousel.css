@@ -1,0 +1,56 @@
+/* remove margins on typography to keep margins consistent */
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+}
+
+.carousel {
+  position: relative;
+  max-width: 600px;
+}
+
+.carousel .carousel-item img {
+  height: auto;
+  width: 100%;
+  max-width: 600px;
+}
+
+.carousel-item {
+  display: none;
+}
+
+.carousel .carousel-item-visible {
+  display: block;
+}
+
+button {
+  background-color: white;
+  border: 0;
+  color: black;
+  font-size: 20px;
+  font-weight: 900;
+  padding: 10px 20px;
+  border-radius: 50%;
+}
+
+.carousel .carousel-actions {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+}
+
+.carousel .carousel-actions button#carousel-button-prev {
+  margin-left: 20px;
+}
+
+.carousel .carousel-actions button#carousel-button-next {
+  margin-right: 20px;
+}
