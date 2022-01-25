@@ -15,3 +15,17 @@ const rollPlayer2 = document.getElementById("player2-roll");
 // buttons
 const rollBtn = document.getElementById("roll-dice-el");
 const resetBtn = document.getElementById("reset-game-btn");
+
+rollBtn.addEventListener("click", rollDice);
+resetBtn.addEventListener("click", resetGame);
+
+function rollDice(){
+    console.log("Roll dice clicked.")
+    // number between 1 and 6
+    let randomNum = Math.floor(Math.random() * 6) +1;
+    console.log(randomNum);
+}
+
+function resetGame(){
+    console.log("Reset button clicked.")
+}
