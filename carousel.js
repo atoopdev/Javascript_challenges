@@ -8,7 +8,8 @@ document.getElementById("carousel-button-next").addEventListener("click", moveTo
 
 function moveToNextSlide(){
     console.log("next slide");
-    slides[slidePosition].classList.remove("carousel-item-visible");
+    hideAllSlides();
+
         // check if at end of slides
     if(slidePosition == totalSlides - 1){
         console.log("End of slides");
@@ -22,4 +23,19 @@ function moveToNextSlide(){
 
 function moveToPrevSlide(){
     console.log("prev slide");
+    hideAllSlides();
+
+    if(slidePosition == 0){
+        slidePosition = totalSlides -1;
+    } else{
+        slidePosition--;
+    }
+    slides[slidePosition].classList.add("carousel-item-visible");
+}
+
+function hideAllSlides(){
+    for(const slide of slides){
+        slide.classList.remove("carousel-item-visible");
+        slide.classList.add("carousel-item-hidden");
+    }
 }
