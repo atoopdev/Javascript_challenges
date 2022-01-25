@@ -11,7 +11,7 @@ function moveToNextSlide(){
     hideAllSlides();
 
         // check if at end of slides
-    if(slidePosition == totalSlides - 1){
+    if(slidePosition === totalSlides - 1){
         console.log("End of slides");
         // reset slide position back to beginning
         slidePosition = 0;
@@ -25,7 +25,7 @@ function moveToPrevSlide(){
     console.log("prev slide");
     hideAllSlides();
 
-    if(slidePosition == 0){
+    if(slidePosition === 0){
         slidePosition = totalSlides -1;
     } else{
         slidePosition--;
@@ -39,3 +39,4 @@ function hideAllSlides(){
         slide.classList.add("carousel-item-hidden");
     }
 }
+
