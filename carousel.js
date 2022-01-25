@@ -40,3 +40,4 @@ function hideAllSlides(){
     }
 }
 
+// possible feature extension - text on slides, automated slide transitions

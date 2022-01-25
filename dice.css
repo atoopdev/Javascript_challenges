@@ -1,0 +1,57 @@
+/* remove margins on typography to keep margins consistent */
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+}
+
+h2 {
+  margin-bottom: 15px;
+}
+
+.container {
+  margin: 40px auto;
+  width: 400px;
+  border: 1px solid red;
+  text-align: center;
+}
+
+.players {
+  display: flex;
+  justify-content: space-around;
+  width: 400px;
+  border: 1px solid blue;
+}
+
+.player1,
+.player2 {
+  width: 200px;
+  height: 200px;
+  border: 1px solid green;
+}
+
+.square {
+  height: 75px;
+  width: 75px;
+  background-color: bisque;
+  border-radius: 4px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.active-player {
+  box-shadow: 10px 10px 10px grey;
+}
+
+button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+}
