@@ -20,11 +20,15 @@ rollBtn.addEventListener("click", function(){
     diceRoll = rollDice();
     if(playerOneTurn){
         console.log("It is player 1's turn.");
+        rollPlayer1.classList.add("active-player");
+        rollPlayer2.classList.remove("active-player");
         gameMessage.textContent = "It is player 1's turn.";
         console.log("player 1 rolled: ", diceRoll);
         rollPlayer1.textContent = diceRoll;
     } else{
         console.log("It is player 2's turn.");
+        rollPlayer2.classList.add("active-player");
+        rollPlayer1.classList.remove("active-player");
         gameMessage.textContent = "It is player 2's turn.";
         console.log("player 2 rolled: ", diceRoll);
         rollPlayer2.textContent = diceRoll;
