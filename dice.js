@@ -16,14 +16,30 @@ const rollPlayer2 = document.getElementById("player2-roll");
 const rollBtn = document.getElementById("roll-dice-el");
 const resetBtn = document.getElementById("reset-game-btn");
 
-rollBtn.addEventListener("click", rollDice);
+rollBtn.addEventListener("click", function(){
+    diceRoll = rollDice();
+    if(playerOneTurn){
+        console.log("It is player 1's turn.");
+        gameMessage.textContent = "It is player 1's turn.";
+        console.log("player 1 rolled: ", diceRoll);
+        rollPlayer1.textContent = diceRoll;
+    } else{
+        console.log("It is player 2's turn.");
+        gameMessage.textContent = "It is player 2's turn.";
+        console.log("player 2 rolled: ", diceRoll);
+        rollPlayer2.textContent = diceRoll;
+    }
+    playerOneTurn =!playerOneTurn;
+    
+});
 resetBtn.addEventListener("click", resetGame);
 
 function rollDice(){
-    console.log("Roll dice clicked.")
+    // console.log("Roll dice clicked.")
     // number between 1 and 6
-    let randomNum = Math.floor(Math.random() * 6) +1;
+    const randomNum = Math.floor(Math.random() * 6) +1;
     console.log(randomNum);
+    return randomNum;
 }
 
 function resetGame(){
