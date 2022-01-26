@@ -73,4 +73,6 @@ function resetGame(){
     rollPlayer2.textContent = "-";
     scorePlayer1.textContent = " ";
     scorePlayer2.textContent = " ";
+    rollPlayer1.classList.add("active-player");
+    rollPlayer2.classList.remove("active-player");
 }
