@@ -13,6 +13,7 @@ body {
 .carousel {
   position: relative;
   max-width: 600px;
+  margin: 40px auto;
 }
 
 .carousel .carousel-item img {
@@ -28,11 +29,11 @@ body {
 
 .carousel .carousel-item-visible {
   display: block;
-  animation: fadeVisibility 0.8s;
+  animation: fadeVisibility 0.5s;
 }
 
 button {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.7);
   border: 0;
   color: black;
   font-size: 20px;
