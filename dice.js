@@ -16,6 +16,10 @@ const rollPlayer2 = document.getElementById("player2-roll");
 const rollBtn = document.getElementById("roll-dice-el");
 const resetBtn = document.getElementById("reset-game-btn");
 
+rollPlayer1.textContent = "-";
+rollPlayer2.textContent = "-";
+gameMessage.textContent = "Let's play!"
+
 rollBtn.addEventListener("click", function(){
     diceRoll = rollDice();
     if(playerOneTurn){
@@ -25,6 +29,12 @@ rollBtn.addEventListener("click", function(){
         gameMessage.textContent = "It is player 1's turn.";
         console.log("player 1 rolled: ", diceRoll);
         rollPlayer1.textContent = diceRoll;
+        playerOneScore+=diceRoll;
+        scorePlayer1.textContent = playerOneScore;
+        if(playerOneScore>19){
+            gameMessage.textContent = "Player One has won!";
+            rollBtn.style.display = "none";
+        }
     } else{
         console.log("It is player 2's turn.");
         rollPlayer2.classList.add("active-player");
@@ -32,6 +42,12 @@ rollBtn.addEventListener("click", function(){
         gameMessage.textContent = "It is player 2's turn.";
         console.log("player 2 rolled: ", diceRoll);
         rollPlayer2.textContent = diceRoll;
+        playerTwoScore+=diceRoll;
+        scorePlayer2.textContent = playerTwoScore;
+        if(playerTwoScore>19){
+            gameMessage.textContent = "Player Two has won!"
+            rollBtn.style.display = "none";
+        }
     }
     playerOneTurn =!playerOneTurn;
     
@@ -48,4 +64,13 @@ function rollDice(){
 
 function resetGame(){
     console.log("Reset button clicked.")
+    rollBtn.style.display = "inline-block";
+    playerOneScore = 0;
+    playerTwoScore = 0;
+    playerOneTurn = true;
+    gameMessage.textContent = "Let's play!"
+    rollPlayer1.textContent = "-";
+    rollPlayer2.textContent = "-";
+    scorePlayer1.textContent = " ";
+    scorePlayer2.textContent = " ";
 }
