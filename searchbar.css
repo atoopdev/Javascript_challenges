@@ -8,6 +8,7 @@ p {
 
 body {
   margin: 0;
+  height: 100vh;
   background-image: url("naassom-azevedo-Q_Sei-TqSlc-unsplash.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -37,4 +38,14 @@ ul {
 
 li {
   padding: 5px;
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    min-width: 325px;
+  }
+  #container {
+    width: 300px;
+    margin: 20px auto;
+  }
 }
