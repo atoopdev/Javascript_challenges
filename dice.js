@@ -76,3 +76,4 @@ function resetGame(){
     rollPlayer1.classList.add("active-player");
     rollPlayer2.classList.remove("active-player");
 }
+
